@@ -1,0 +1,12 @@
+main {
+	height    : 500px;
+	overflow-y: auto;
+}
+
+abbr {
+	text-decoration: none !important;
+}
+
+.abbr {
+	@extend abbr;
+}
