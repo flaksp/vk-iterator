@@ -47,6 +47,8 @@
 			$('#progress').text(0);
 			$('#progress_from, #progress_to').text(parseInt(current_doc_id));
 
+			$('ol li').addClass('text-muted');
+
 			window.interval_loop = setInterval(function() {
 				var docs = [];
 				/*
