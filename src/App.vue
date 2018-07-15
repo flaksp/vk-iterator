@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <AlertBox type="AlertBox.Info">
+      Нажмите "Помощь" над окном приложения, чтобы прочесть инструкцию по использованию.
+    </AlertBox>
+
+    <AlertBox type="AlertBox.Warning">
+      Не запускайте приложение в нескольких вкладках. Это не ускорит перебор документов. Более того, это может вызвать проблемы в работе приложения.
+    </AlertBox>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import AlertBox from './components/AlertBox.vue';
 
 @Component({
   components: {
-  HelloWorld,
+  AlertBox,
   },
   })
 export default class App extends Vue {}
@@ -19,10 +24,6 @@ export default class App extends Vue {}
 
 <style lang="stylus">
 #app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+  font-family 'Roboto', sans-serif
+  padding 1rem
 </style>
